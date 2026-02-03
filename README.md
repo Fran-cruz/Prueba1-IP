@@ -1,4 +1,4 @@
-###### **Pasos realizados para completar la práctica**
+# **Pasos realizados para completar la práctica**
 
 
 
