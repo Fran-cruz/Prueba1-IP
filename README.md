@@ -1,59 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+###### **Pasos realizados para completar la práctica**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Se creó un repositorio público en GitHub para almacenar el proyecto correspondiente a la primera prueba del primer parcial.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+[https://github.com/Fran-cruz/Prueba1-IP](https://github.com/Fran-cruz/Prueba1-IP)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2\. Se inicializó el repositorio en la máquina local utilizando *'git init'*.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3\. Se diseñó el esquema de la base de datos, definiendo las tablas y sus relaciones antes de la implementación.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4\. Se definieron las siguientes tablas con sus respectivos campos:
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+* **Student**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+*- id*
 
-## Security Vulnerabilities
+*- name*
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+*- acc\_num*
 
-## License
+*- email*
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*- phone*
+
+*- address*
+
+*- ref*
+
+*- active (boolean)*
+
+*- faculty\_id*
+
+
+
+* **Faculty**
+
+*- id*
+
+*- name*
+
+
+
+* **Course**
+
+*- id*
+
+*- name*
+
+*- active (boolean)*
+
+*- details*
+
+
+
+5\. Se creó el proyecto de Laravel utilizando la estructura estándar del framework.
+
+
+
+6\. Se generaron las migraciones respetando el orden correcto para evitar conflictos de llaves foráneas:
+
+
+
+Faculty -> Student -> Course
+
+
+
+7\. Se añadieron los campos correspondientes en cada migración utilizando *'$table->string()'*, *'$table->boolean()'* y otros tipos de datos según correspondía.
+
+
+
+8\. Se configuraron los modelos agregando la propiedad '*protected $fillable'* para permitir la asignación masiva de los campos definidos.
+
+
+
+9\. Se creó una migración adicional para representar la relación Muchos a Muchos (N–N) entre las tablas *'Student'* y *'Course'*.
+
+
+
+10\. Se agregaron las llaves foráneas en las tablas correspondientes para asegurar la integridad referencial de la base de datos.
+
+
+
+11\. Se implementaron las funciones públicas de relación en los modelos:
+
+
+
+Relaciones *'belongsTo'*, *'hasMany'*, *'belongsToMany'*
+
+
+
+12\. Se configuró el archivo .env con los datos correctos de conexión a la base de datos (*'DB\_DATABASE'*, *'DB\_USERNAME'*, *'DB\_PASSWORD'*).
+
+
+
+13\. Se ejecutaron las migraciones para crear las tablas y verificar su correcta visualización en MySQL.
+
+
+
+14\. Se agregaron todos los archivos del proyecto al control de versiones con *'git add ./'*.
+
+
+
+15\. Se realizó el commit incluyendo todo el proyecto completo.
+
+
+
+16\. Finalmente, se ejecutó el push para subir el proyecto completo al repositorio en la nube en GitHub.
+
